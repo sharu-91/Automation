@@ -20,13 +20,13 @@ public class Result implements ITestListener, IAutoConst{
 		// TODO Auto-generated method stub
 		passCount++;
 		
+		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		failCount++;
-		
+		failCount++;		
 	}
 
 	@Override
@@ -53,6 +53,9 @@ public class Result implements ITestListener, IAutoConst{
 		Reporter.log("pass : " +passCount,true);
 		Reporter.log("fail : " +failCount,true);
 		Utility.writeResultToXL(XL_PATH, passCount, failCount);
+//		Reporter.log(Utility.getXLData(XL_PATH, 0,0 ),true);
+//		Reporter.log(Utility.getXLRowCount(XL_PATH)+"",true);
+		
 	}
 
 }

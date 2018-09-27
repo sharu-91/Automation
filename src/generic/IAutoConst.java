@@ -9,4 +9,7 @@ public interface IAutoConst {
 	
 	String CONFIG_PATH = "./config.properties";
 	String XL_PATH = "./data/summary.xlsx";
+	
+	String INPUT_PATH = "./data1/input.xlsx";
+	String PHOTO_PATH = "./photo";
 }

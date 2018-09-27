@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="chaitra(failed)">
+    <parameter name="ip" value="192.168.43.97"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="script.TestDemo">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="testA"/>
+        </methods>
+      </class> <!-- script.TestDemo -->
+    </classes>
+  </test> <!-- chaitra(failed) -->
+</suite> <!-- Failed suite [Suite] -->
