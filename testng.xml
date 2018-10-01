@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
-  <test thread-count="5" name="chaitra">
+  <test thread-count="5" name="Test1">
   <parameter name="ip" value="192.168.43.97"/>
   <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="script.TestDemo"/>
-    </classes>
+    <packages>
+      <package name="script"/>
+    </packages>
   </test> <!-- Test -->
-  <test thread-count="5" name="chandan">
-  <parameter name="ip" value="192.168.43.12"/>
+  <test thread-count="5" name="Test2">
+  <parameter name="ip" value="192.168.43.108"/>
   <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="script.TestDemo"/>
-    </classes>
+    <packages>
+      <package name="script"/>
+    </packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

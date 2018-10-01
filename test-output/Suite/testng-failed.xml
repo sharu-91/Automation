@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="chaitra(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
     <parameter name="ip" value="192.168.43.97"/>
     <parameter name="browser" value="chrome"/>
     <classes>
@@ -12,6 +12,33 @@
           <include name="testA"/>
         </methods>
       </class> <!-- script.TestDemo -->
+      <class name="script.TestDemo2">
+        <methods>
+          <include name="TestB"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.TestDemo2 -->
     </classes>
-  </test> <!-- chaitra(failed) -->
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)" parallel="tests">
+    <parameter name="ip" value="192.168.43.108"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="script.TestDemo">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="testA"/>
+        </methods>
+      </class> <!-- script.TestDemo -->
+      <class name="script.TestDemo2">
+        <methods>
+          <include name="TestB"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+        </methods>
+      </class> <!-- script.TestDemo2 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

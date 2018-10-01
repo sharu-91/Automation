@@ -26,7 +26,7 @@ abstract public class BaseTest implements IAutoConst  {
 	}
 	@Parameters({"ip","browser"})
 	@BeforeMethod(alwaysRun=true)
-	public void openApplication(String ip,String browser) {
+	public void openApplication(@Optional("localhost")String ip,@Optional("chrome")String browser) {
 		driver = Utility.openBrowser(driver,ip, browser);
 		driver.manage().timeouts().implicitlyWait(duration , TimeUnit.SECONDS);
 		driver.get(url);
